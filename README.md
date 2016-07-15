@@ -44,13 +44,10 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 打开网页，点击绿色的"clone or download"，然后DownloadZip，将下载的文件解压到`Sublime Text 3\Data\`下
 
-6 更改语法高亮，以识别`sbit` `sfr` `interrupt`等
 
-下载此文件夹下的`C Improved.tmLanguage`文件，复制到`Sublime Text 3\Data\Packages\User\`下
+6 更改语法高亮，以识别`sbit` `sfr` `interrupt`等，并安装一些常用的代码段【可选】
 
-7 安装一些常用的代码段【可选】
-
-下载此文件夹下的`C51`文件夹，复制到`Sublime Text 3\Data\Packages\User\`下
+下载此文件夹下的`C51`文件夹，复制到`Sublime Text 3\Data\Packages\User\`下.关于代码段Snippet的知识请自行搜索。
 
 
 
