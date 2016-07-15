@@ -1,0 +1,14 @@
+{
+"scope": "source.c",
+"completions":
+[
+{ "trigger": "sfr ", "contents": "sfr ${1:GPIO_}${2:LED} = P${3:0};\t${4://特殊功能寄存器P$3: ${5:$1$2}}"},
+{ "trigger": "sbit ", "contents": "sbit ${1:变量名} = P${2:0}^${3:0};\t\t${4://位变量P$2^$3: ${5:$1}}"},
+{ "trigger": "defineGPIO", "contents":"#define ${1:GPIO_}${2:LED} P${3:0}\t${4://P$3: ${5:注释}}"},
+{ "trigger": "defineuchar", "contents":"#define uchar unsigned char"},
+{ "trigger": "defineuint", "contents":"#define uint unsigned int"},
+{ "trigger": "define", "contents":"#define ${1:uint} ${2:unsigned int}\t${3://${4:注释}}"},
+{ "trigger": "declarefun", "contents":"${1:void} ${2:test_fun}(${3:void});"},
+
+]
+}

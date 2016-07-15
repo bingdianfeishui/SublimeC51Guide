@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+/**
+ *@Tittle		:	${1:test}
+ *@Name			:	${2:LeeYong}
+ *@Company		:	NULL Co.,Ltd
+ *@Time			:	${3:[Press F5 to insert time]}
+ *@Desctription	:	${4:[desctription]}
+ */
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>headcomment</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c, source.py, source.cpp</scope>
+	<description>Head Comment</description>
+</snippet>

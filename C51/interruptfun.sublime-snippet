@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+${1:void} ${2:test_fun}(${3:void}) interrupt ${4:1} ${5:using ${6:0}}
+{
+	${0:/*code*/}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>interruptfun</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c</scope>
+	<description>Interrupt Function Definition</description>
+</snippet>

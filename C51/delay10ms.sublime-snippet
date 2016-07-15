@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * 晶振：12.00MHz
+ * 非精确延时10ms的倍数
+ * @param multiple 10ms的倍数。延时时长=10ms * multiple
+ */
+void delay10ms(unsigned int multiple)
+{
+	unsigned char i, j;
+	for (; multiple > 0; multiple--)
+	{
+		i = 117;
+		j = 184;
+		do
+		{
+			while (--j);
+		} while (--i);
+	}
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>delay10ms</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c</scope>
+	<description>12MHz，非精确延时，步长10ms</description>
+</snippet>

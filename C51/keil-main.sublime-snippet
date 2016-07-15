@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+#include <reg52.h>
+#include <intrins.h>
+
+#define uchar unsigned char
+#define uint unsigned char
+
+void main()
+{
+	${0:/*code*/}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>keilmain</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c</scope>
+	<description>Keil C51主程序结构</description>
+</snippet>

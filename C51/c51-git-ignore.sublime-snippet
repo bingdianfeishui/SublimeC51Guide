@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+# Custom ignore
+*.pwi
+*.dbk
+*.lnp
+*.m51
+*.plg
+*.sublime-project
+*.lee
+*.bak
+*.uv*
+*.dsn
+*.lst
+*.iex
+log.txt
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>c51ignore</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- scope>source.*</scope -->
+	<description>C51 git忽略文件</description>
+</snippet>
