@@ -1,0 +1,2 @@
+# SublimeC51Guide
+Keil自带的编辑器太烂，这是用Sublime Text来开发8051程序的教程
