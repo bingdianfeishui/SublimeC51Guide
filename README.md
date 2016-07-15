@@ -23,35 +23,39 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 4 安装普通插件
 * 按`Ctrl+Shfit+P`调出PackageControl面板，选择`Install Package`，输入相应的插件名称即可。
 * 推荐插件：
->C Improved
->Alignment
->All Autocomplete
->BracketHighlighter
->DocBlockr
->HexViewer
->SideBarEnhancements
->WordHighlight
->SublimeAStyleFormatter
->ConvertToUTF8
->ClangAutoComplete
+
+> C Improved
+> Alignment
+> All Autocomplete
+> BracketHighlighter
+> DocBlockr
+> HexViewer
+> SideBarEnhancements
+> WordHighlight
+> SublimeAStyleFormatter
+> ConvertToUTF8
+> ClangAutoComplete
 	
 5 安装C51必须插件
 * [Keil-Compiler](https://github.com/bingdianfeishui/sublime-Keil-Compiler)
 * [Hex-Bin-System](https://github.com/bingdianfeishui/hex-bin_system)
 * 安装方法：
+* 
 打开网页，点击绿色的"clone or download"，然后DownloadZip，将下载的文件解压到`Sublime Text 3\Data\`下
 
 6 更改语法高亮，以识别`sbit` `sfr` `interrupt`等
+
 下载此文件夹下的`C Improved.tmLanguage`文件，复制到`Sublime Text 3\Data\Packages\User\`下
 
 7 安装一些常用的代码段【可选】
+
 下载此文件夹下的`C51`文件夹，复制到`Sublime Text 3\Data\Packages\User\`下
 
 
 
 ##添加Sublime Text 3到右键菜单
 
-	>此处不采用直接修改注册表的方法，而采用inf文件安装的方法。
+> 此处不采用直接修改注册表的方法，而采用inf文件安装的方法。
 * 在Sublime Text 3文件夹下新建一个`*.inf`文件，打开并输入如下内容：
 ```
 [Version]
