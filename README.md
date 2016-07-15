@@ -23,6 +23,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 4 安装普通插件
 * 按`Ctrl+Shfit+P`调出PackageControl面板，选择`Install Package`，输入相应的插件名称即可。
 * 推荐插件：
+```
 	C Improved
 	Alignment
 	All Autocomplete
@@ -34,7 +35,8 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 	SublimeAStyleFormatter
 	ConvertToUTF8
 	ClangAutoComplete
-	
+```
+
 5 安装C51必须插件
 * [Keil-Compiler](https://github.com/bingdianfeishui/sublime-Keil-Compiler)
 * [Hex-Bin-System](https://github.com/bingdianfeishui/hex-bin_system)
@@ -54,7 +56,8 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 ##添加Sublime Text 3到右键菜单
 
-	>此处不采用直接修改注册表的方法，而采用inf文件安装的方法。
+此处不采用直接修改注册表的方法，而采用inf文件安装的方法。
+
 * 在Sublime Text 3文件夹下新建一个`*.inf`文件，打开并输入如下内容：
 
 ```
