@@ -7,11 +7,12 @@
 
  *@Tittle		:	${1:test}
  *@Version		:	${2:v1.0}
- *@Author		:	${2:Liy}
- *@Dat			:	${3:[Press F5 to insert time]}
- *@Desctription	:	${4:[desctription]}
+ *@Author		:	${3:Liy}
+ *@Dat			:	${4:[Press F5 to insert time]}
+ *@Desctription	:	${5:[desctription]}
  *@History		:	
- 		${5:[history]}
+ 	${6:#v${7:1.0}	${8:[Press F5 to insert time]}
+ 		1. ${9:some comment}}
  
  **********************************************************
  **********************************************************
@@ -22,5 +23,5 @@
 	<tabTrigger>headcomment</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.c, source.py, source.cpp</scope>
-	<description>Head Comment</description>
+	<description>文件头部注释</description>
 </snippet>
