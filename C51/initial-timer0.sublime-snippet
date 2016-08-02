@@ -1,0 +1,24 @@
+<snippet>
+	
+    <content><![CDATA[//系统参数，请复制到文件开头宏定义部分
+#define FSOC 12000000 			//晶振频率，Hz
+#define TMOD 12					//机器周期模式，12T、6T、1T
+#define TIMESPAN FSOC/TMOD/100 	//定时器定时n个机器周期。12MHz/12T模式下，为10000个机器周期，即10ms
+#define TIMERCOUNTER 100 		//定时器中断重复次数。12MHz/12T模式下100次*10ms，共1s。count为unsigned char，此值不得超过255
+
+void InitialTimer0(void)		
+{
+	ET0 = 1;			//打开定时器0
+	EA = 1;				//打开系统总中断开关
+	TMOD &= 0xF0;		//清空定时器0的工作模式参数
+	TMOD |= 0x01;		//设置定时器0的工作模式为模式1,16位定时器
+	TH0 = (65536 - TIMESPAN) / 256;		//设置定时高8位初值
+	TL0 = (65536 - TIMESPAN) % 256;		//设置定时低8位初值
+	TF0 = 0;			//清除TF0溢出标志
+	TR0 = 1;			//定时器0开始计时
+}
+]]></content>
+    <tabTrigger>initialtimer0</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope>
+    <description>Timer0初始化</description>
+</snippet>

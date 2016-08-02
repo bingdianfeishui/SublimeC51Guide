@@ -2,16 +2,17 @@
 	<content><![CDATA[
 /**
  * 晶振：12.00MHz
+ * 模式：12T
  * 非精确延时1ms的倍数
  * @param multiple 1ms的倍数。延时时长=1ms * multiple
  */
-void delay1ms(unsigned int multiple)
+void Delay1ms(unsigned int multiple)
 {
 	unsigned char i, j;
 	for (; multiple > 0; multiple--)
 	{
-		i = 12;
-		j = 169;
+		i = 2;
+		j = 235;
 		do
 		{
 			while (--j);

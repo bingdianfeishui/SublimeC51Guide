@@ -1,11 +1,20 @@
 <snippet>
 	<content><![CDATA[
 /**
+ **********************************************************
+ ******    Copyright(C), 2010-2016, NULL Co.,Ltd     ******
+ **********************************************************
+
  *@Tittle		:	${1:test}
- *@Name			:	${2:LeeYong}
- *@Company		:	NULL Co.,Ltd
- *@Time			:	${3:[Press F5 to insert time]}
+ *@Version		:	${2:v1.0}
+ *@Author		:	${2:Liy}
+ *@Dat			:	${3:[Press F5 to insert time]}
  *@Desctription	:	${4:[desctription]}
+ *@History		:	
+ 		${5:[history]}
+ 
+ **********************************************************
+ **********************************************************
  */
 
 ]]></content>

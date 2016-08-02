@@ -1,0 +1,47 @@
+<snippet>
+	
+    <content><![CDATA[
+//IO口声明,需移动到文件开头部分
+sbit HC595_SCK = P0 ^ 0;		//P0 ^ 0: 595的移位寄存器时钟管脚 SH_CP
+sbit HC595_RCK = P0 ^ 1;		//P0 ^ 1: 595的输出寄存器时钟管脚 ST_CP
+sbit HC595_SER = P0 ^ 2;		//P0 ^ 2: 595的数据串行输入管脚 DS
+
+/**
+ * 将datacode数组中指定个数的数据输入级联的595芯片。
+ * 注意：数组为倒序输入,即指定个数的最后一个元素先输入,单个元素从高位到低位顺序输入。
+ * 举例：InputTo595(arr,4) 为最先输入arr[3]的bit7,然后依次输入低位,然后输入arr[2]的bit7。。。
+ * @param datacode unsigned char *,输入数据数组名,指针
+ * @param len      unsigned char,要输入的数组元素个数,从数组第一个元素开始计
+ */
+void HC595InputData(unsigned char *datacode, unsigned char len)
+{
+	unsigned char i, j;
+	for (j = len; j > 0; j--)
+	{
+		HC595_SCK = 0;
+		for (i = 0; i < 8; i++)
+		{
+			HC595_SER = (datacode[j - 1] & 0x80) ;	//取数组指定长度内的最后一个元素的最高位
+			datacode[j - 1] <<= 1;	//左移一位,丢弃原来的最高位
+			HC595_SCK = 1;			//上升沿,移位寄存器移位输入
+			HC595_SCK = 0;
+		}
+	}
+}
+
+/**
+ * 使能595芯片输出。仅将移位寄存器的数据装入输出锁存器,还需另外控制OE(输出使能)管脚(本例中OE接地)。
+ * OE=L,输出管脚输出有效值。OE=H,输出管脚为高阻态。实际应用中可直接将OE接GND。
+ */
+void HC595OutputData()
+{
+	HC595_RCK = 0;
+	_nop_();
+	HC595_RCK = 1;	//上升沿,输出锁存器获取移位寄存器中的数据
+	HC595_RCK = 0;	//输出锁存器状态保持
+}
+]]></content>
+    <tabTrigger>hc595control</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope>
+    <description>595芯片级联控制</description>
+</snippet>
